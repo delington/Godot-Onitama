@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://grid/grid_lines.png" type="Texture" id=1]
+
+[node name="TileSet" type="Node2D"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Grass" type="Sprite" parent="."]
+position = Vector2( 48, 48 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
