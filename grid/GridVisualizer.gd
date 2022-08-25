@@ -3,8 +3,9 @@ extends Node2D
 const BACKGROUND_COLOR = Color.burlywood
 const LINE_COLOR = Color(0, 0, 0, 0.2)
 const LINE_WIDTH = 2
-const RED_PLAYER_SENTRY_COLOR = Color(204, 0, 0, 0.1)
+const RED_PLAYER_SENTRY_COLOR = Color( 0.698039, 0.133333, 0.133333, 0.2 )
 const BLUE_PLAYER_SENTRY_COLOR = Color( 0.254902, 0.411765, 0.882353, 0.2 )
+
 onready var grid = $"%Grid"
 
 func _ready():

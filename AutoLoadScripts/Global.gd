@@ -3,6 +3,7 @@ extends Node2D
 
 const PLAYER_COLOR = Color.firebrick
 const ENEMY_COLOR = Color.royalblue
+const SELECTION_COLOR = Color.white
 
 
 # Called when the node enters the scene tree for the first time.
