@@ -1,6 +1,9 @@
 extends TileMap
 
-enum {EMPTY, PLAYER, ENEMY_PLAYER}
+const player_color = Global.PLAYER_COLOR
+const enemy_color = Global.ENEMY_COLOR
+
+enum {EMPTY, STUDENT, MASTER, ENEMY_STUDENT, ENEMY_MASTER}
 
 var tile_size = get_cell_size()
 var half_tile_size = tile_size / 2
@@ -9,6 +12,8 @@ var grid_size = Vector2(5, 5)
 var grid = []
 
 onready var GridLinesTile = preload("res://grid/Grid.tscn")
+onready var Master = preload("res://master/Master.tscn")
+onready var Student = preload("res://student/Student.tscn")
 
 func _ready():
 	# 1. Create the grid Array
@@ -18,8 +23,29 @@ func _ready():
 
 			grid[x].append(EMPTY)
 
-	# 2. Create obstacles
+	place_player_pawns(0, STUDENT, MASTER, player_color)
+	place_player_pawns(4, ENEMY_STUDENT, ENEMY_MASTER, enemy_color)
 
+
+func place_player_pawns(row_index, student_type, master_type, color):
+	for i in 5:
+		var start_position = Vector2(i, row_index)
+		
+		if (i == 2):
+			var master_pawn = Master.instance()
+			place_pawn(master_pawn, start_position, student_type, color)
+		else:
+			var student = Student.instance()
+			place_pawn(student, start_position, master_type, color)
+	
+	for i in 5:
+		var start_position = Vector2(i, 4)
+		
+func place_pawn(pawn, start_position, type, color):
+	pawn.position = map_to_world(start_position) + half_tile_size
+	pawn.modulate = color
+	grid[start_position.x][start_position.y] = type
+	add_child(pawn)
 
 func is_cell_vacant():
 	# Return true if the cell is vacant, else false
