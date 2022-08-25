@@ -5,6 +5,7 @@
 [ext_resource path="res://grid/GridVisualizer.gd" type="Script" id=3]
 
 [node name="Node2D" type="Node2D"]
+position = Vector2( 256, 192 )
 
 [node name="Grid" type="TileMap" parent="."]
 unique_name_in_owner = true
