@@ -12,16 +12,17 @@ config_version=4
 
 config/name="Onitama"
 run/main_scene="res://Game.tscn"
-config/icon="res://icon.png"
+config/icon="res://icon.PNG"
 
 [autoload]
 
 Global="*res://AutoLoadScripts/Global.gd"
+Utils="*res://AutoLoadScripts/Utils.tscn"
 
 [display]
 
-window/size/width=1028
-window/size/height=768
+window/size/width=1280
+window/size/height=1024
 
 [gui]
 

@@ -25,8 +25,8 @@ func _ready():
 		for y in range(grid_size.y):
 			grid[x].append(EMPTY)
 
-	place_player_pawns(4, ENEMY_STUDENT, ENEMY_MASTER, ENEMY_COLOR)
-	place_player_pawns(0, STUDENT, MASTER, PLAYER_COLOR)
+	place_player_pawns(0, ENEMY_STUDENT, ENEMY_MASTER, ENEMY_COLOR)
+	place_player_pawns(4, STUDENT, MASTER, PLAYER_COLOR)
 
 func place_player_pawns(row_index, student_type, master_type, color):
 	for i in 5:

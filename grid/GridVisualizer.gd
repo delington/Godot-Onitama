@@ -1,10 +1,10 @@
 extends Node2D
 
-const BACKGROUND_COLOR = Color.burlywood
+const BACKGROUND_COLOR = Global.BACKGROUND_COLOR
 const LINE_COLOR = Color(0, 0, 0, 0.2)
 const LINE_WIDTH = 2
-const RED_PLAYER_SENTRY_COLOR = Color( 0.698039, 0.133333, 0.133333, 0.2 )
-const BLUE_PLAYER_SENTRY_COLOR = Color( 0.254902, 0.411765, 0.882353, 0.2 )
+const RED_PLAYER_SENTRY_COLOR = Color( 0.698039, 0.133333, 0.133333, 0.2 ) #firebrick
+const BLUE_PLAYER_SENTRY_COLOR = Color( 0.254902, 0.411765, 0.882353, 0.2 ) #royalblue
 
 onready var grid = $"%Grid"
 
@@ -13,11 +13,12 @@ func _ready():
 
 func _draw():
 	#var window_size = OS.get_window_size()
-	draw_background()
-	draw_player_sanctuary(Vector2(2, 0), RED_PLAYER_SENTRY_COLOR)
-	draw_player_sanctuary(Vector2(2, 4), BLUE_PLAYER_SENTRY_COLOR)
-	draw_columns()
-	draw_rows()
+	#draw_background()
+	#draw_player_sanctuary(Vector2(2, 0), RED_PLAYER_SENTRY_COLOR)
+	#draw_player_sanctuary(Vector2(2, 4), BLUE_PLAYER_SENTRY_COLOR)
+	#draw_columns()
+	#draw_rows()
+	pass
 
 func draw_background():
 	var grid_size = grid.grid_size.x * grid.tile_size.x
