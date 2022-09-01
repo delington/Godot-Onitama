@@ -14,7 +14,7 @@ func set_unselected(sprite: Sprite):
 func set_selected(sprite: Sprite):
 	sprite.selected = true
 	sprite.set_modulate(selection_color)
-	sprite.modulate.a = 5
+	sprite.modulate.a = 2
 
 func handle_left_mouse_button_selection(event, sprite: Sprite):
 	if event is InputEventMouseButton and event.pressed and event.button_index == BUTTON_LEFT:

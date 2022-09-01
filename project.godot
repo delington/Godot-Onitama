@@ -8,6 +8,28 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Node2D",
+"class": "Game",
+"language": "GDScript",
+"path": "res://Game.gd"
+}, {
+"base": "TileMap",
+"class": "Grid",
+"language": "GDScript",
+"path": "res://grid/Grid.gd"
+}, {
+"base": "Sprite",
+"class": "Pawn",
+"language": "GDScript",
+"path": "res://pawn/Pawn.gd"
+} ]
+_global_script_class_icons={
+"Game": "",
+"Grid": "",
+"Pawn": ""
+}
+
 [application]
 
 config/name="Onitama"

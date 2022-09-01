@@ -1,4 +1,4 @@
-extends TileMap
+class_name Grid extends TileMap
 
 const PLAYER_COLOR = Global.PLAYER_COLOR
 const ENEMY_COLOR = Global.ENEMY_COLOR
@@ -41,6 +41,7 @@ func place_player_pawns(row_index, student_type, master_type, color):
 			place_pawn(student, start_position, master_type, color)
 		
 func place_pawn(pawn, start_position, type, color):
+	pawn.coordinate = start_position
 	pawn.position = map_to_world(start_position) + half_tile_size
 	pawn.set_modulate(color)
 	pawn.color = color
@@ -48,12 +49,5 @@ func place_pawn(pawn, start_position, type, color):
 	grid[start_position.x][start_position.y] = type
 	add_child(pawn)
 
-func is_cell_vacant():
-	# Return true if the cell is vacant, else false
-	pass
-
-
-func update_child_pos(child, new_pos, direction):
-	# Move a child to a new position in the grid Array
-	# Returns the new target world position of the child
+func draw_square(position: Vector2):
 	pass

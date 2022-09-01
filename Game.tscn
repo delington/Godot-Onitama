@@ -1,15 +1,18 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://grid/Grid.gd" type="Script" id=1]
 [ext_resource path="res://grid/grid_lines_tileset.tres" type="TileSet" id=2]
 [ext_resource path="res://grid/GridVisualizer.gd" type="Script" id=3]
 [ext_resource path="res://card/Card.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Game.gd" type="Script" id=5]
 [ext_resource path="res://img/field.png" type="Texture" id=6]
 
 [node name="Game" type="Node2D"]
 position = Vector2( 387, 240 )
+script = ExtResource( 5 )
 
-[node name="Card" parent="." instance=ExtResource( 4 )]
+[node name="Card1" parent="." instance=ExtResource( 4 )]
+unique_name_in_owner = true
 position = Vector2( 66, 617 )
 
 [node name="Grid" type="TileMap" parent="."]

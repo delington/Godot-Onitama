@@ -22,9 +22,12 @@ position = Vector2( 0, 20 )
 shape = SubResource( 1 )
 
 [node name="Title" type="Label" parent="."]
+unique_name_in_owner = true
 margin_left = -64.0
 margin_top = 72.0
 margin_right = -1.0
 margin_bottom = 108.0
 custom_fonts/font = SubResource( 2 )
 text = "Boar"
+
+[connection signal="input_event" from="Area2D" to="." method="_on_Area2D_input_event"]
