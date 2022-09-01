@@ -18,16 +18,10 @@ _global_script_classes=[ {
 "class": "Grid",
 "language": "GDScript",
 "path": "res://grid/Grid.gd"
-}, {
-"base": "Sprite",
-"class": "Pawn",
-"language": "GDScript",
-"path": "res://pawn/Pawn.gd"
 } ]
 _global_script_class_icons={
 "Game": "",
-"Grid": "",
-"Pawn": ""
+"Grid": ""
 }
 
 [application]
