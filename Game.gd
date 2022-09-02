@@ -19,7 +19,7 @@ func _ready():
 #func _process(delta):
 #	pass
 
-func manage_card_and_pawn_selection():
+func handle_draw_of_moves():
 	var is_card_selected = Global.is_selected(Global.selected_card)
 	var is_pawn_selected = Global.is_selected(Global.selected_pawn)
 	
