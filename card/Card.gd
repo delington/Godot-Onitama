@@ -2,7 +2,7 @@ extends Sprite
 
 onready var title = $"%Title"
 
-var game
+var game: Game
 var selected: bool = false
 var color: Color = Color.white
 var card_name: String

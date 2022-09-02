@@ -27,14 +27,17 @@ func handle_draw_of_moves():
 		var pawn_coordinate: Vector2 = grid.world_to_map(Global.selected_pawn.position)
 		draw_possible_moves(pawn_coordinate, Global.selected_card)
 		
-	elif !is_card_selected || !is_pawn_selected:
+	else:
 		remove_moves_from_board()
 
 func remove_moves_from_board():
-	if !move_list.empty():
-		for move in move_list:
-			move.queue_free()
-		move_list.clear()
+	if move_list.empty():
+		return
+	
+	for move in move_list:
+		move.queue_free()
+		
+	move_list.clear()
 
 func draw_possible_moves(pawn_base_coord: Vector2, card):
 	for move in card.moves:

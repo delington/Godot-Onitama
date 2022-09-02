@@ -22,7 +22,4 @@ var selected_pawn = null
 var is_any_pawn_selected = false
 
 func is_selected(selected_object) -> bool:
-	if selected_object != null:
-		return selected_object.selected
-	
-	return false
+	return selected_object.selected if selected_object != null else false
