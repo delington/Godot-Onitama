@@ -6,6 +6,7 @@ var selected: bool = false
 var color: Color
 var coordinate: Vector2
 
+
 func _init():
 	game = Global.ref["Game"]
 
@@ -22,4 +23,5 @@ func _on_Area_input_event(viewport, event, shape_idx):
 			Global.selected_pawn = self
 			Global.is_any_pawn_selected = true
 			game.handle_draw_of_moves()
-	Utils.handle_left_mouse_button_selection(event, self)
+			
+		Utils.handle_left_mouse_button_selection(event, self)

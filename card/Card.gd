@@ -19,8 +19,8 @@ func set_name(name: String):
 	title.text = name
 
 func _on_Area2D_input_event(viewport, event, shape_idx):
-	Utils.handle_left_mouse_button_selection(event, self)
-	
 	if event is InputEventMouseButton and event.pressed and event.button_index == BUTTON_LEFT:
+		Utils.handle_left_mouse_button_selection(event, self)
+
 		Global.selected_card = self
 		game.handle_draw_of_moves()
